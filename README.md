@@ -21,11 +21,8 @@ The dataset comprises various sales records from Amazon, containing details such
 - **Revenue Growth**: Concluded with an 18% uplift in revenue, showcasing the benefits of data-driven decision-making.
 
 ## Implementation Steps
-1. Clone the repository:
-git clone 
 
-sql
-Copy code
+1.git clone https://github.com/amitkumar720-dotcom/Amazon-Sales-Analysis_Project
 2. Open the Excel file to manage and review the raw data.
 3. Execute the SQL scripts in your SQL environment to generate insights.
 
@@ -38,5 +35,4 @@ Copy code
 This project illustrates the effectiveness of SQL and Excel in analyzing sales data. The insights gained can inform strategic decisions and improve sales performance, highlighting the value of data analysis in today's business environment.
 
 ## Contact Information
-For inquiries or collaboration, please reach out to:
 - Email: amitkumarpaul720@gmail.com
