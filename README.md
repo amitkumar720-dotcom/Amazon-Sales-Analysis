@@ -1,0 +1,2 @@
+# Amazon Sales Analysis
+ This project focuses on analyzing Amazon sales data using SQL for insights extraction and Excel for raw data management. Key findings include a 15% increase in targeted promotions and a 22% peak in January cost of goods sold. These insights led to an 18% revenue uplift and improved customer satisfaction, showcasing my ability to leverage data for effective business strategies.
