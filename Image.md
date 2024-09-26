@@ -1,4 +1,4 @@
-1.SQL Query for Sales Data Extraction
+1. SQL Query for Sales Data Extraction
 
 2. Excel Data Preprocessing
    
@@ -9,4 +9,5 @@
 5. SQL Query Result for Revenue Growth
 
 6. Final Report or Summary in Sql
+   
    
