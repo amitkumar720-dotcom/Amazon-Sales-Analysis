@@ -5,7 +5,7 @@
    
 ![image](https://github.com/user-attachments/assets/47d95448-7460-425e-b8c9-582b5b9d8052)
 
-4. Exploratory Data Analysis
+3. Exploratory Data Analysis
    
    ![image](https://github.com/user-attachments/assets/448b61dd-d231-4984-b179-07fced65412e)
    
@@ -18,7 +18,7 @@
 
 
    
-6. Feature Engineering
+4. Feature Engineering
 
    ![image](https://github.com/user-attachments/assets/f3b4cce0-dbce-4297-8404-67a62826a81f)
 
@@ -26,7 +26,7 @@
 
    ![image](https://github.com/user-attachments/assets/3d6d4edd-d1ef-4713-87c7-a87c1d60135f)
 
-8. Key Insights and Visualizations
+5. Key Insights and Visualizations
    
    ![image](https://github.com/user-attachments/assets/b23df47c-8269-4d41-b0f0-b68791bbb271)
 
@@ -48,7 +48,8 @@
 
 
 
-10. Final Recommendations
+6. Final Recommendations
+    
    Focus on high-demand categories like food, fashion, and beauty while improving low-performing home products. Target Wednesday afternoons and Naypyitaw with tailored promotions. 
    Leverage female customer preferences and encourage membership upgrades. Optimize for seasonal peaks like January. Implement feedback loops for continuous improvement to enhance sales 
    strategies, customer satisfaction, and overall growth.
