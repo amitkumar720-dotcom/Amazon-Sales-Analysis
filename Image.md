@@ -1,13 +1,15 @@
-1. SQL Query for Sales Data Extraction
+1. Data Collection
+![image](https://github.com/user-attachments/assets/b775b834-47ec-4f65-b7fa-ff4b349d5448)
 
-2. Excel Data Preprocessing
+2. Data Preprocessing
+   ![image](https://github.com/user-attachments/assets/47d95448-7460-425e-b8c9-582b5b9d8052)
+
+3. Exploratory Data Analysis
    
-3. SQL Query Result
-   
-4. Excel/Power BI Visualization of Sales Trends
+4. Feature Engineering
  
-5. SQL Query Result for Revenue Growth
+5. Key Insights and Visualizations
 
-6. Final Report or Summary in Sql
+6. Final Recommendations
    
    
