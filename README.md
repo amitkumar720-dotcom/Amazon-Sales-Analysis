@@ -3,9 +3,14 @@
 ## Overview
 This project investigates Amazon sales data to uncover actionable insights. Utilizing SQL for data extraction and Excel for data management, the analysis aims to enhance understanding of sales trends and improve decision-making strategies.
 
+![image](https://github.com/user-attachments/assets/377ffea8-d423-4921-911a-207ccebc303c)
+
+
 ## Technologies Used
 - SQL: For data querying and analysis.
 - Excel: For data handling,  and management.
+
+- 
 
 ## Data Description
 The dataset comprises various sales records from Amazon, containing details such as product categories, sales amounts, and promotional activities. It was preprocessed in Excel to clean and organize the data for SQL analysis, ensuring accuracy and relevance.
