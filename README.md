@@ -29,6 +29,12 @@ The dataset comprises various sales records from Amazon, containing details such
 🔍 Optimize Sales Strategies: Develop targeted campaigns for high-value customers.
 
 ## Key Insights
+High Demand: Food and beverages rank highest in demand, with an average rating of 7.11.
+Fashion Accessories: Fashion products are the second most popular, scoring an average rating of 7.03.
+Health and Beauty: Ranked third in sales volume, health and beauty products maintain strong market performance.
+Underperforming Category: Home and lifestyle products have the lowest sales figures and ratings in comparison to other categories.
+
+![image](https://github.com/user-attachments/assets/af9b5dbd-3979-4c16-972c-24e33ac7c24b)
 
 
 ## Implementation 
@@ -36,6 +42,8 @@ The dataset comprises various sales records from Amazon, containing details such
 1  git clone https://github.com/amitkumar720-dotcom/Amazon-Sales-Analysis_Project
 2. Open the Excel file to manage and review the raw data.
 3. Execute the SQL scripts in your SQL environment to generate insights.
+![image](https://github.com/user-attachments/assets/2e0675c2-47b1-4069-bf50-376ae9fffc28)
+
 
 ## File Structure
 - data: Contains the raw sales data in Excel format.
