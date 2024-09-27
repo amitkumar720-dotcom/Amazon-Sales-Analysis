@@ -51,12 +51,17 @@
 
 6. Final Recommendations
     
-   Focus on high-demand categories like food, fashion, and beauty while improving low-performing home products. Target Wednesday afternoons and Naypyitaw with tailored promotions. 
-   Leverage female customer preferences and encourage membership upgrades. Optimize for seasonal peaks like January. Implement feedback loops for continuous improvement to enhance sales 
-   strategies, customer satisfaction, and overall growth.
-
-   Invest in product quality improvements,discount some products in  odd days and occassion also. please  chceking products  and its durability and some other factors it might be help to 
+-- Focus on high-demand categories such as food, fashion, and beauty.
+-- Improve low-performing home products.
+-- Target Wednesday afternoons and Naypyitaw with tailored promotions.
+-- Leverage female customer preferences and encourage membership upgrades.
+-- Optimize for seasonal peaks like January.
+-- Implement feedback loops for continuous improvement to enhance sales strategies, customer satisfaction, and overall growth.
+ -- Invest in product quality improvements,discount some products in  odd days and occassion also. please  chceking products  and its durability and some other factors it might be help to
    grow the business of the company.
+ 
+ 
+
    ![image](https://github.com/user-attachments/assets/1d906e7c-495c-4d8f-ab4b-c01e391a7436)
 
    
