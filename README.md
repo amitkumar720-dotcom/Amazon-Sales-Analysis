@@ -10,20 +10,26 @@ This project investigates Amazon sales data to uncover actionable insights. Util
 - SQL: For data querying and analysis.
 - Excel: For data handling,  and management.
 
-- 
+![image](https://github.com/user-attachments/assets/69257e75-1c19-465f-bec5-1866c98baf72)
+
+![image](https://github.com/user-attachments/assets/e58b0ed2-17f2-462e-a4a4-33cdef0738fa)
+
+
+
 
 ## Data Description
 The dataset comprises various sales records from Amazon, containing details such as product categories, sales amounts, and promotional activities. It was preprocessed in Excel to clean and organize the data for SQL analysis, ensuring accuracy and relevance.
 
+![image](https://github.com/user-attachments/assets/bf49527e-d750-4879-b970-ef18c032a746)
+
+
 ## Objectives
-- Identify sales trends and patterns within the dataset.
-- Analyze the impact of promotional activities on sales performance.
-- Provide recommendations for optimizing sales strategies based on findings.
+📈 Identify Sales Trends: Identify top-selling products/services.
+📊 Analyze Promotional Impact: Measure the effectiveness of various promotional activities on driving sales growth.
+🔍 Optimize Sales Strategies: Develop targeted campaigns for high-value customers.
 
 ## Key Insights
-- Promotional Impact: Discovered a 15% increase in sales resulting from targeted promotions.
-- Cost Analysis: Noted a significant 22% spike in the cost of goods sold in January.
-- Revenue Growth: Concluded with an 18% uplift in revenue, showcasing the benefits of data-driven decision-making.
+
 
 ## Implementation 
 
