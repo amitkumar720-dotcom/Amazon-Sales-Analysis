@@ -57,7 +57,7 @@
 -- Leverage female customer preferences and encourage membership upgrades.
 -- Optimize for seasonal peaks like January.
 -- Implement feedback loops for continuous improvement to enhance sales strategies, customer satisfaction, and overall growth.
- -- Invest in product quality improvements,discount some products in  odd days and occassion also. please  chceking products  and its durability and some other factors it might be help to
+-- Invest in product quality improvements,discount some products in  odd days and occassion also. please  chceking products  and its durability and some other factors it might be help to
    grow the business of the company.
  
  
