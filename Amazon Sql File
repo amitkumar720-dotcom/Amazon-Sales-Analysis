@@ -1,28 +1,29 @@
-1. Create Database and Table
-
 CREATE DATABASE  AMAZON;
 
 USE AMAZON;
+
 -- Data Wrangling
+
 -- checking null values so null values are present in this dataset.
-CREATE TABLE amazon_sales_data(
-invoice_id VARCHAR(30) NOT NULL PRIMARY KEY,
-branch VARCHAR(5) NOT NULL,
-city VARCHAR(30) NOT NULL,
-customer_type VARCHAR(30) NOT NULL,
-gender VARCHAR(10) NOT NULL,
-product_line VARCHAR(100) NOT NULL,
-unit_price DECIMAL(10,2) NOT NULL,
-quantity INT(20) NOT NULL,
-tax_pct FLOAT(6,4) NOT NULL,
-total DECIMAL(12, 4) NOT NULL,
-date DATETIME NOT NULL,
-time TIME NOT NULL,
-payment VARCHAR(15) NOT NULL,
-cogs DECIMAL(10,2) NOT NULL,
-gross_margin_pct FLOAT(11,9),
-gross_income DECIMAL(12, 4),
-rating FLOAT(2, 1)
+
+CREATE TABLE amazon_sales_data (
+    invoice_id VARCHAR(30) NOT NULL PRIMARY KEY,
+    branch VARCHAR(5) NOT NULL,
+    city VARCHAR(30) NOT NULL,
+    customer_type VARCHAR(30) NOT NULL,
+    gender VARCHAR(10) NOT NULL,
+    product_line VARCHAR(100) NOT NULL,
+    unit_price DECIMAL(10 , 2 ) NOT NULL,
+    quantity INT(20) NOT NULL,
+    tax_pct FLOAT(6 , 4 ) NOT NULL,
+    total DECIMAL(12 , 4 ) NOT NULL,
+    date DATETIME NOT NULL,
+    time TIME NOT NULL,
+    payment VARCHAR(15) NOT NULL,
+    cogs DECIMAL(10 , 2 ) NOT NULL,
+    gross_margin_pct FLOAT(11 , 9 ),
+    gross_income DECIMAL(12 , 4 ),
+    rating FLOAT(2 , 1 )
 );
 
 -- Feature Engineering
@@ -65,36 +66,39 @@ ALTER TABLE AMAZON_sales_data ADD COLUMN month_name VARCHAR(10);
 UPDATE AMAZON_sales_data
 SET month_name = MONTHNAME(date);
 
+-- Exploratory Data Analysis
+
 select * from amazon_sales_data;
 
 -- Business Questions To Answer:
+-- Product Analysis
 
--- 1.  What is the count of distinct cities in the dataset?
-       select count(distinct city)from amazon_sales_data;
-
--- 2.  For each branch, what is the corresponding city?
-       select branch,city from amazon_sales_data;
-
--- 3.  What is the count of distinct product lines in the dataset?
-       select count(distinct product_line )from amazon_sales_data;
-
--- 4.  Which payment method occurs most frequently?
-       SELECT payment, COUNT(payment) AS common_payment_method 
-       FROM amazon_sales_data GROUP BY payment ORDER BY common_payment_method DESC LIMIT 1;
+-- 1. What is the count of distinct cities in the dataset?
+      select count(distinct city)from amazon_sales_data;
       
--- 5.  How much revenue is generated each month?
-       Select month_name as Month,sum(total) as Total_Revenue from amazon_sales_data group by month_name
-       order by Total_Revenue Desc ;
-     
--- 6.  In which month did the cost of goods sold reach its peak?
-       select  month_name as month,sum(cogs) as cogs from amazon_sales_data group by month_name order by cogs desc;
+-- 2. For each branch, what is the corresponding city?
+      select branch,city from amazon_sales_data;
+      
+-- 3. What is the count of distinct product lines in the dataset?
+	  select count(distinct product_line )from amazon_sales_data;
+      
+-- 4. Which payment method occurs most frequently?
+      SELECT payment, COUNT(payment) AS common_payment_method 
+      FROM amazon_sales_data GROUP BY payment ORDER BY common_payment_method DESC LIMIT 1;
+      
+-- 5. How much revenue is generated each month?
+      Select month_name as Month,sum(total) as Total_Revenue from amazon_sales_data group by month_name
+      order by Total_Revenue Desc ;
+    
+-- 6. In which month did the cost of goods sold reach its peak?
+      select  month_name as month,sum(cogs) as cogs from amazon_sales_data group by month_name order by cogs desc;
   
--- 7.  Which product line generated the highest revenue?
-       select Product_line,    sum(total) as Total_revenue from amazon_sales_data
-       group by Product_line order by Total_revenue  desc limit 1;
+-- 7. Which product line generated the highest revenue?
+      select Product_line,    sum(total) as Total_revenue from amazon_sales_data
+      group by Product_line order by Total_revenue  desc limit 1;
  
 -- 8.  In which city was the highest revenue recorded?
-       select city, sum(total) as Total_revenue  from amazon_sales_data 
+	   select city, sum(total) as Total_revenue  from amazon_sales_data 
        group by city order by Total_revenue  desc;
  
 -- 9.  Which product line incurred the highest Value Added Tax?
@@ -104,7 +108,7 @@ select * from amazon_sales_data;
 -- 10. For each product line, add a column indicating "Good" if its sales are above average, otherwise "Bad."
        SELECT  AVG(quantity) AS avg_qnty FROM amazon_sales_data;
 
-       SELECT product_line,
+SELECT product_line,
  CASE
   WHEN AVG(quantity) > 6 THEN "Good"
         ELSE "Bad"
@@ -113,27 +117,26 @@ FROM amazon_sales_data
 GROUP BY product_line;
 
 -- 11. Identify the branch that exceeded the average number of products sold.
-       SELECT  branch,SUM(quantity) AS quantities FROM amazon_sales_data
+	   SELECT  branch,SUM(quantity) AS quantities FROM amazon_sales_data
        GROUP BY branch HAVING SUM(quantity) > (SELECT AVG(quantity) FROM amazon_sales_data);
     
 -- 12. Which product line is most frequently associated with each gender?
-       SELECT gender,product_line,COUNT(gender) AS total_cnt
-       FROM amazon_sales_data GROUP BY gender, product_line
-       ORDER BY total_cnt DESC;   
-
+      SELECT gender,product_line,COUNT(gender) AS total_cnt
+      FROM amazon_sales_data GROUP BY gender, product_line
+      ORDER BY total_cnt DESC;   
+    
 -- 13. Calculate the average rating for each product line.
-
        SELECT ROUND(AVG(rating), 2) as avg_rating, product_line
        FROM amazon_sales_data GROUP BY product_line
        ORDER BY avg_rating DESC;  
+       
+-- Sales Analysis
 
 -- 14. Count the sales occurrences for each time of day on every weekday.
        select time_of_day,count(*) as total_sales
        from amazon_sales_data where day_name = "Sunday"
        group by time_of_day    
-order by total_sales desc;
-
-
+       order by total_sales desc;
 
 -- 15. Identify the customer type contributing the highest revenue.
        select customer_type, round (sum(total), 2) as total_revenue
@@ -150,13 +153,15 @@ order by total_sales desc;
 
 -- 18. What is the count of distinct customer types in the dataset?
        SELECT COUNT(DISTINCT customer_type) FROM AMAZON_sales_DATA;
-
--- 19  What is the count of distinct payment methods in the dataset?
-       SELECT COUNT(DISTINCT PAYMENT) FROM AMAZON_sales_DATA;
+      
+-- 19.. What is the count of distinct payment methods in the dataset?
+        SELECT COUNT(DISTINCT PAYMENT) FROM AMAZON_sales_DATA;
 
 -- 20. Which customer type occurs most frequently?
        SELECT customer_type, SUM(total) as total_sales
        FROM AMAZON_sales_DATA GROUP BY customer_type ORDER BY total_sales LIMIT 1;
+       
+-- Customer Analysis
 
 -- 21. Identify the customer type with the highest purchase frequency.
        SELECT customer_type, COUNT(customer_type) AS common_customer
@@ -184,7 +189,21 @@ order by total_sales desc;
 
 -- 27. Determine the day of the week with the highest average ratings for each branch.
        SELECT  branch, day_name, AVG(rating) AS average_rating
-       FROM AMAZON_sales_DATA GROUP BY day_name, branch ORDER BY average_rating DESC;
+	   FROM AMAZON_sales_DATA GROUP BY day_name, branch ORDER BY average_rating DESC;
+       
+-- 28. What is the total revenue generated by different customer types for each gender in the Amazon sales data?
+       SELECT Gender, Customer_type, SUM(Total) AS Total_Revenue
+       FROM AMAZON_sales_DATA
+       GROUP BY Gender, Customer_type;
+       
+
+
+
+
+
+
+
+
 
 
 
