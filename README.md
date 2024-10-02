@@ -49,9 +49,13 @@ Underperforming Category: Home and lifestyle products have the lowest sales figu
 - data: Contains the raw sales data in Excel format.
 - sql: Includes SQL scripts used for analysis.
 - reports: Contains any generated reports or summaries.
+- 
+![DALL·E 2024-10-02 21 24 28 - A clean and organized folder structure diagram showing the hierarchy of a project repository  The structure includes three main folders_ 'data', 'sql' (1)](https://github.com/user-attachments/assets/8eb8f523-bef1-487d-9380-381429c3fca7)
 
 ## Conclusion
 This project illustrates the effectiveness of SQL and Excel in analyzing sales data. The insights gained can inform strategic decisions and improve sales performance, highlighting the value of data analysis in today's business environment.
+
+![Uploading image.png…]()
 
 ## Contact Information
 - Email: amitkumarpaul720@gmail.com
