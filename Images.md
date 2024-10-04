@@ -1,44 +1,56 @@
 1\. Data Collection
 
-!\[image\](https://github.com/user-attachments/assets/b775b834-47ec-4f65-b7fa-ff4b349d5448)
+![image 1](https://github.com/user-attachments/assets/fc55857b-81fa-4931-82a7-7ced46ed5eb1)
+
 
 3\. Data Preprocessing
 
-!\[image\](https://github.com/user-attachments/assets/47d95448-7460-425e-b8c9-582b5b9d8052)
+
+![images 2](https://github.com/user-attachments/assets/cfa77e6d-f5d2-4df4-bf22-3704a57b8999)
+
+
 
 3\. Exploratory Data Analysis
 
-!\[image\](https://github.com/user-attachments/assets/448b61dd-d231-4984-b179-07fced65412e)
+![images 3](https://github.com/user-attachments/assets/bf0e029d-9129-4e69-9b2d-87326e627bc0)
 
-!\[image\](https://github.com/user-attachments/assets/77aa83ed-794b-42f3-902c-8d44539e8934)
+![images 4](https://github.com/user-attachments/assets/92194311-6c2a-4c88-b018-f6d080b56ac9)
 
-!\[image\](https://github.com/user-attachments/assets/52877e03-1e3d-4de2-ae71-4ce55fd93461)
+![images 5](https://github.com/user-attachments/assets/daf8154d-5b7a-4828-bbf5-528122b45916)
+
 
 4\. Feature Engineering
 
-!\[image\](https://github.com/user-attachments/assets/f3b4cce0-dbce-4297-8404-67a62826a81f)
+![images 6](https://github.com/user-attachments/assets/ddab2c90-018b-4a9c-8622-feee990860d5)
 
-!\[image\](https://github.com/user-attachments/assets/da9dfc67-757d-45b2-a87f-5866dc0c74a8)
+![images 7](https://github.com/user-attachments/assets/004ce32e-2592-4663-8c10-e6f8fc04b16a)
 
-!\[image\](https://github.com/user-attachments/assets/3d6d4edd-d1ef-4713-87c7-a87c1d60135f)
+![images 8](https://github.com/user-attachments/assets/eaadd6f7-beb7-4764-8d65-f155f10f6582)
+
 
 5\. Key Insights and Visualizations
 
-!\[image\](https://github.com/user-attachments/assets/b23df47c-8269-4d41-b0f0-b68791bbb271)
+![9](https://github.com/user-attachments/assets/8b5deb23-64df-4313-9a01-7d0b4454b0f8)
 
-!\[image\](https://github.com/user-attachments/assets/6b9fa860-4acb-4c19-8341-78ddeb6d30d0)
+![10](https://github.com/user-attachments/assets/dc2570f8-e4a6-4082-beb8-ee258f530a3f)
 
-!\[image\](https://github.com/user-attachments/assets/eb9bb919-6a46-471b-ae79-ab247d8a3a6c)
+![11](https://github.com/user-attachments/assets/ff9bd071-471e-43cc-a89f-e503dd5e01d4)
 
-!\[image\](https://github.com/user-attachments/assets/c1ee329c-5ba8-4480-acec-fc2c49a6f522)
+![12](https://github.com/user-attachments/assets/441bfe2b-65ef-4905-a05c-22c25a546554)
 
-!\[image\](https://github.com/user-attachments/assets/fe529dac-bdb6-4b39-adde-92342feb0433)
+![13](https://github.com/user-attachments/assets/fbe75ea9-4d58-4d87-9427-f02668dc9f61)
 
-!\[image\](https://github.com/user-attachments/assets/2d7a79aa-8394-4043-92ec-74bcfdbba8b8)
+![14](https://github.com/user-attachments/assets/8c8f5d86-eb98-4fcf-b2cc-9e5b8e320872)
 
-!\[image\](https://github.com/user-attachments/assets/f40753a1-59d3-4e1f-83d0-9dcde9f1a160)
 
-!\[image\](https://github.com/user-attachments/assets/2b517056-2d7b-4f52-8d5d-5554a2b568f6)
+![15](https://github.com/user-attachments/assets/d793561e-c357-4467-af60-d6b5efbbd98f)
+
+![16](https://github.com/user-attachments/assets/64c19c8d-bf87-4f84-b816-47e5fd9c70f6)
+
+
+
+
+
 
 6\. Final Recommendations
 
@@ -53,4 +65,6 @@ products in odd days and occassion also. please chceking products and
 its durability and some other factors it might be help to grow the
 business of the company.
 
-!\[image\](https://github.com/user-attachments/assets/1d906e7c-495c-4d8f-ab4b-c01e391a7436)
+![DALL·E 2024-10-04 13 49 18 - A visualization of sales data analysis using SQL and Excel, featuring bar charts, line graphs, and pie charts displaying sales performance trends, cus (1)](https://github.com/user-attachments/assets/5bf6d6e5-1220-4ce7-aaeb-596cb68de5da)
+
+
