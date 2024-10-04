@@ -57,4 +57,4 @@ This project illustrates the effectiveness of SQL and Excel in analyzing sales d
 
 
 ## Contact Information
-- Email: amitkumarpaul720@gmail.com
+- Email: amitkumarpaul720@gmail.com.
