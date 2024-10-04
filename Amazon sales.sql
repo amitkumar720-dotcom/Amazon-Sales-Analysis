@@ -176,7 +176,7 @@ GROUP BY product_line;
 
 -- 27. Determine the day of the week with the highest average ratings for each branch.
        SELECT  branch, day_name, AVG(rating) AS average_rating
-       FROM AMAZON_sales_DATA GROUP BY day_name, branch ORDER BY average_rating DESC;
+       FROM AMAZON_sales_DATA GROUP BY day_name, branch ORDER BY average_rating DESC;.
 
 
 
