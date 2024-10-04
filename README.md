@@ -50,6 +50,7 @@ Underperforming Category: Home and lifestyle products have the lowest sales figu
 - data: Contains the raw sales data in Excel format.
 - sql: Includes SQL scripts used for analysis.
 - reports: Contains any generated reports or summaries.
+  
   📁 /data: Raw sales data
   📁 /sql: SQL scripts for analysis
   📁 /reports: Generated reports and summaries
