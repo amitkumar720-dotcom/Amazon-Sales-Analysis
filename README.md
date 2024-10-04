@@ -42,7 +42,8 @@ Underperforming Category: Home and lifestyle products have the lowest sales figu
 1  git clone https://github.com/amitkumar720-dotcom/Amazon-Sales-Analysis_Project
 2. Open the Excel file to manage and review the raw data.
 3. Execute the SQL scripts in your SQL environment to generate insights.
-![image](https://github.com/user-attachments/assets/2e0675c2-47b1-4069-bf50-376ae9fffc28)
+![Uploading DALL·E 2024-10-04 22.34.55 - A digital workspace illustrating the implementation of an Amazon Sales Analysis project. The scene should include a computer screen displaying SQL scr (1).jpg…]()
+
 
 
 ## File Structure
