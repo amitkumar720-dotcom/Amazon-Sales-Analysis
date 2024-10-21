@@ -1,69 +1,67 @@
+-- Step 1: Create the Amazon database
+CREATE DATABASE AMAZON;
 
-CREATE DATABASE  AMAZON;
-
+-- Step 2: Switch to the Amazon database for use
 USE AMAZON;
--- Data Wrangling
--- checking null values so null values are present in this dataset.
-CREATE TABLE amazon_sales_data(
-invoice_id VARCHAR(30) NOT NULL PRIMARY KEY,
-branch VARCHAR(5) NOT NULL,
-city VARCHAR(30) NOT NULL,
-customer_type VARCHAR(30) NOT NULL,
-gender VARCHAR(10) NOT NULL,
-product_line VARCHAR(100) NOT NULL,
-unit_price DECIMAL(10,2) NOT NULL,
-quantity INT(20) NOT NULL,
-tax_pct FLOAT(6,4) NOT NULL,
-total DECIMAL(12, 4) NOT NULL,
-date DATETIME NOT NULL,
-time TIME NOT NULL,
-payment VARCHAR(15) NOT NULL,
-cogs DECIMAL(10,2) NOT NULL,
-gross_margin_pct FLOAT(11,9),
-gross_income DECIMAL(12, 4),
-rating FLOAT(2, 1)
+
+-- Step 3: Create a table to store sales data, incorporating key sales attributes
+CREATE TABLE amazon_sales_data (
+    invoice_id VARCHAR(30) NOT NULL PRIMARY KEY,    -- Unique Invoice Identifier
+    branch VARCHAR(5) NOT NULL,                     -- Branch code
+    city VARCHAR(30) NOT NULL,                      -- City where the transaction occurred
+    customer_type VARCHAR(30) NOT NULL,             -- Customer type (Member/Normal)
+    gender VARCHAR(10) NOT NULL,                    -- Gender of the customer
+    product_line VARCHAR(100) NOT NULL,             -- Product category
+    unit_price DECIMAL(10,2) NOT NULL,              -- Price per unit of the product
+    quantity INT(20) NOT NULL,                      -- Quantity of product sold
+    tax_pct FLOAT(6,4) NOT NULL,                    -- Tax percentage
+    total DECIMAL(12, 4) NOT NULL,                  -- Total sales amount (with tax)
+    date DATETIME NOT NULL,                         -- Transaction date
+    time TIME NOT NULL,                             -- Transaction time
+    payment VARCHAR(15) NOT NULL,                   -- Payment method (Cash/Credit)
+    cogs DECIMAL(10,2) NOT NULL,                    -- Cost of Goods Sold (COGS)
+    gross_margin_pct FLOAT(11,9),                   -- Gross Margin Percentage
+    gross_income DECIMAL(12, 4),                    -- Gross income from the sale
+    rating FLOAT(2, 1)                              -- Customer rating for the product
 );
 
 -- Feature Engineering
--- 2.1 Add a new column named timeofday to give insight of sales in the Morning, Afternoon and Evening. This will help answer the question on which part of the day most sales are ma        
+-- 1. Time of Day Classification for Sales
+Added a new column time_of_day to classify transactions based on the time of purchase, helping to identify when sales peak (Morning, Afternoon, Evening, Night).
 
-SELECT time,
+-- Step 1: Classify transactions based on the time of day
+ALTER TABLE amazon_sales_data ADD COLUMN time_of_day VARCHAR(20);
 
-(CASE 
-	WHEN `time` BETWEEN "00:00:00" AND "12:00:00" THEN "Morning"
-	WHEN `time` BETWEEN "12:01:00" AND "16:00:00" THEN "Afternoon"
-    WHEN `time` BETWEEN "17:01:00" AND "20:00:00" THEN "EVENING"
-	ELSE "NIGHT" 
-END) AS time_of_day
-FROM AMAZON_sales_data ;
-
-ALTER TABLE AMAZON_sales_data ADD COLUMN time_of_day VARCHAR(20);
-
-UPDATE AMAZON_sales_data
+-- Step 2: Update the table to include the time of day
+UPDATE amazon_sales_data
 SET time_of_day = (
-	CASE 
-		WHEN `time` BETWEEN "00:00:00" AND "12:00:00" THEN "Morning"
-		WHEN `time` BETWEEN "12:01:00" AND "16:00:00" THEN "Afternoon"
-		WHEN `time` BETWEEN "17:01:00" AND "20:00:00" THEN "EVENING"
-	ELSE "NIGHT" 
-	END
+    CASE
+        WHEN `time` BETWEEN '00:00:00' AND '12:00:00' THEN 'Morning'
+        WHEN `time` BETWEEN '12:01:00' AND '16:00:00' THEN 'Afternoon'
+        WHEN `time` BETWEEN '17:01:00' AND '20:00:00' THEN 'Evening'
+        ELSE 'Night'
+    END
 );
- -- 2.2 Add a new column named dayname that contains the extracted days of the week on which the given transaction took place (Mon, Tue, Wed, Thur, Fri). This will help answer the question on which week of the day each branch is busiest.
-select date,dayname(date) from amazon_sales_data;
-ALTER TABLE AMAZON_sales_data ADD COLUMN day_name VARCHAR(10);
-UPDATE AMAZON_sales_data set day_name=dayname(date);
-UPDATE AMAZON_sales_data
-SET date= date_format(str_to_date(date,'%d-%m-%Y'), '%Y-%m-%d');
+ -- 2. Weekday Analysis
+Added a new column day_name that extracts the day of the week from the transaction date to determine which days are busiest for each branch.
+
+-- Step 1: Add a column for day of the week
+ALTER TABLE amazon_sales_data ADD COLUMN day_name VARCHAR(10);
+
+-- Step 2: Populate the new column with the day of the week derived from the transaction date
+UPDATE amazon_sales_data
+SET day_name = DAYNAME(date);
 
 
--- 2.3 Add a new column named monthname that contains the extracted months of the year on which the given transaction took place (Jan, Feb, Mar). Help determine which month of the year has the most sales and profit.        
+-- 3. Monthly Analysis
+Added a new column month_name to extract the month of the year from the transaction date, allowing the identification of peak sales months.
 
-ALTER TABLE AMAZON_sales_data ADD COLUMN month_name VARCHAR(10);
+-- Step 1: Add a column for the month name
+ALTER TABLE amazon_sales_data ADD COLUMN month_name VARCHAR(10);
 
-UPDATE AMAZON_sales_data
+-- Step 2: Populate the new column with the month derived from the transaction date
+UPDATE amazon_sales_data
 SET month_name = MONTHNAME(date);
-
-select * from amazon_sales_data;
 
 -- Business Questions To Answer:
 -- 1. What is the count of distinct cities in the dataset?
