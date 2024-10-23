@@ -81,10 +81,10 @@ CREATE TABLE amazon_sales_data (
        FROM amazon_sales_data
        GROUP BY payment
 )
-   SELECT payment, payment_count
-   FROM payment_counts
-   ORDER BY payment_count DESC
-   LIMIT 1;
+       SELECT payment, payment_count
+       FROM payment_counts
+       ORDER BY payment_count DESC
+       LIMIT 1;
 
 -- 5. How much revenue is generated each month?
       SELECT month_name, SUM(total) AS total_revenue 
